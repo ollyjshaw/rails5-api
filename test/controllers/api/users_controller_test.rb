@@ -28,11 +28,11 @@ class Api::UsersControllerTest < ActionDispatch::IntegrationTest
   #   assert_response 200
   # end
 
-  test "should destroy api_user" do
-    assert_difference('User.count', -1) do
-      delete api_user_url(@api_user), as: :json
-    end
+  # test "should destroy api_user" do
+  #   assert_difference('User.count', -1) do
+  #     delete api_user_url(@api_user), as: :json
+  #   end
 
-    assert_response 204
-  end
+  #   assert_response 204
+  # end
 end
