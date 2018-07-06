@@ -4,6 +4,7 @@ class UserTest < ActiveSupport::TestCase
   test "should save a user" do
     u = User.new(name: "Olly")
     assert u.save
+    assert_equal "Olly", u.name
   end
 
   test "using raises" do
