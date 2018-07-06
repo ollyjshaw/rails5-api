@@ -18,6 +18,14 @@ class Api::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response 201
   end
 
+  test "should not create api_user" do
+    assert_no_difference('User.count') do
+      post api_users_url, params: { user: { namex: "Olly" } }, as: :json
+    end
+
+    assert_response 422
+  end
+
   # test "should show api_user" do
   #   get api_user_url(@api_user), as: :json
   #   assert_response :success

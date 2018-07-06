@@ -16,11 +16,12 @@ module Api
         end
 
         def destroy
-            @post = @user.posts.find_by(params[:id])
+            @post = @user.posts.find_by(id: params[:id])
             if @post
               @post.destroy
               head :no_content #that's what gets returned anyways
             else
+              puts "params" + params[:id]
               render json: {post: "not found"}, status: :not_found
             end
         end
