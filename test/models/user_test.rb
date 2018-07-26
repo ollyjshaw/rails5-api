@@ -15,11 +15,4 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "Validation failed: Name can't be blank", err.message
   end
 
-  test "using raises naa" do
-    err = assert_raises(ActiveRecord::RecordInvalid) do
-      u = User.new
-      u.save!
-    end
-    assert_equal "Validation failed: Name can't be blank", err.message
-  end
 end
