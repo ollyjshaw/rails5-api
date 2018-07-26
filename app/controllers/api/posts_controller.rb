@@ -1,7 +1,8 @@
 module Api
     class PostsController < ApplicationController
         include ActionController::HttpAuthentication::Token::ControllerMethods
-        before_action :authenticate, only: [:create, :destroy]
+        before_action :authenticate_user, only: [:create, :destroy]
+        # before_action :authenticate, only: [:create, :destroy]
         def index
             @posts = Post.order('created_at ASC')
         end

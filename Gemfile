@@ -18,6 +18,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'rack-cors'
+gem 'knock'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
